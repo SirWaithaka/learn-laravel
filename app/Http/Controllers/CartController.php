@@ -37,6 +37,12 @@ class CartController extends Controller
         return redirect()->route('cart.index')->with('success_message', 'Item was added to your cart');
     }
 
+    /**
+     * Remove the specified resource from Storage
+     * 
+     * @param int $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy($id)
     {
         Cart::remove($id);
