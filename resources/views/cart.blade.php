@@ -51,17 +51,17 @@
           </div>
           <div class="cart-table-row-right">
             <div class="cart-table-actions">
-                <form action="{{ route('cart.destroy', $item->rowId) }}" method="POST">
-                  {{ csrf_field() }}
-                  {{ method_field('DELETE') }}
+              <form action="{{ route('cart.destroy', $item->rowId) }}" method="POST">
+                {{ csrf_field() }}
+                {{ method_field('DELETE') }}
 
-                  <button type="submit" class="cart-options">Remove</button>
-                </form>
-                <form action="{{ route('cart.switchToSaveForLater', $item->rowId) }}" method="POST">
-                  {{ csrf_field() }}
+                <button type="submit" class="cart-options">Remove</button>
+              </form>
+              <form action="{{ route('cart.switchToSaveForLater', $item->rowId) }}" method="POST">
+                {{ csrf_field() }}
 
-                  <button type="submit" class="cart-options">Save For Later</button>
-                </form>
+                <button type="submit" class="cart-options">Save For Later</button>
+              </form>
             </div>
             <div>
               <select class="quantity">
@@ -132,8 +132,17 @@
             </div>
             <div class="cart-table-row-right">
               <div class="cart-table-actions">
-                <a href="#">Remove</a> <br>
-                <a href="#">Move to Cart</a>
+                <form action="{{ route('saveForLater.destroy', $item->rowId) }}" method="POST">
+                  {{ csrf_field() }}
+                  {{ method_field('DELETE') }}
+  
+                  <button type="submit" class="cart-options">Remove</button>
+                </form>
+                <form action="{{ route('saveForLater.switchToCart', $item->rowId) }}" method="POST">
+                  {{ csrf_field() }}
+  
+                  <button type="submit" class="cart-options">Move to Cart</button>
+                </form>
               </div>
               <div>{{ $item->model->presetPrice() }}</div>
             </div>
