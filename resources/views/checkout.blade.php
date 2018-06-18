@@ -199,14 +199,14 @@
       
       // set default values
       // for dev only
-      // document.querySelector('#email').value = 'blah@email.com';
-      // document.querySelector('#name').value = 'Blah Blah';
-      // document.querySelector('#address').value = 'Street Address';
-      // document.querySelector('#city').value = 'Nrb';
-      // document.querySelector('#province').value = 'Nai';
-      // document.querySelector('#postalcode').value = '00100';
-      // document.querySelector('#phone').value = '0700000000';
-      // document.querySelector('#name_on_card').value = 'Blaaah';
+      document.querySelector('#email').value = 'blah@email.com';
+      document.querySelector('#name').value = 'Blah Blah';
+      document.querySelector('#address').value = 'Street Address';
+      document.querySelector('#city').value = 'Nrb';
+      document.querySelector('#province').value = 'Nai';
+      document.querySelector('#postalcode').value = '00100';
+      document.querySelector('#phone').value = '0700000000';
+      document.querySelector('#name_on_card').value = 'Blaaah';
 
       form.addEventListener('submit', function(event) {
         event.preventDefault();
