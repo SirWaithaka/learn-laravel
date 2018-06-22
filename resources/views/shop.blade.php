@@ -59,6 +59,9 @@
         @endforeach
 
       </div> <!-- end products -->
+
+      <div class="spacer"></div>
+      {{ $products->appends(request()->input())->links() }}
     </div>
   </div>
 
